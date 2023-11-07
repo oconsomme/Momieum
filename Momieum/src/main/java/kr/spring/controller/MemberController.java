@@ -40,6 +40,12 @@ public class MemberController {
 		return "member/mypage";
 	}	
 	
+//	심리테스트결과 페이지 이동
+	@RequestMapping("/testResult.do")
+	public String testResult() {
+		System.out.println("심리테스트결과 페이지 이동");
+		return "member/testResult";
+	}
 
 	
 	
