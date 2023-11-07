@@ -8,10 +8,11 @@ public class subPageController {
 	
 
 	//	서브페이지 이동
-	@RequestMapping("/subPage1")
-	public String subPage1() {
-		return "subPage/subPage1";
+	@RequestMapping("/introService")
+	public String introService() {
+		return "subPage/introService";
 	}
+	
 	
 	
 	
