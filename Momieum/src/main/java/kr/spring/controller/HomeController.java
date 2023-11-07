@@ -14,29 +14,13 @@ public class HomeController {
 	}
 	
 //	소개페이지 이동
-	@RequestMapping("/introService.do")
-	public String introService() {
+	@RequestMapping("/subPage1.do")
+	public String subPage1() {
 		System.out.println("주요서비스 페이지 이동");
-		return "subPage/introService";
+		return "subPage/subPage1";
 	}
 	
-	@RequestMapping("/charService.do")
-	public String charService() {
-		System.out.println("주요서비스 페이지 이동");
-		return "subPage/charService";
-	}
 	
-	@RequestMapping("/howtouseService.do")
-	public String howtouseService() {
-		System.out.println("주요서비스 페이지 이동");
-		return "subPage/howtouseService";
-	}
-	
-	@RequestMapping("/orgService.do")
-	public String orgService() {
-		System.out.println("주요서비스 페이지 이동");
-		return "subPage/orgService";
-	}
 	
 	
 // 심리상담테스트 페이지 이동
@@ -71,13 +55,7 @@ public class HomeController {
 		return "map";
 	}	
 
-	// 공지사항, 커뮤니티 이동
-		@RequestMapping("/boardList.do")
-		public String boardList() {
-			System.out.println("공지사항, 커뮤니티 이동");
-			return "boards/boardList";
-		}	
-		
+
 //		관리자 페이지 이동
 		@RequestMapping("/adminPage.do")
 		public String adminPage() {
@@ -99,6 +77,15 @@ public class HomeController {
 		public String memberList() {
 			System.out.println("관리자회원관리 페이지 이동");
 			return "admin/memberList";
-		}			
+		}
+		
+		
+//		테스트 페이지 이동
+		@RequestMapping("/test.do")
+		public String test() {
+			System.out.println("테스트 페이지 이동");
+			return "test";
+		}		
+		
 		
 }
