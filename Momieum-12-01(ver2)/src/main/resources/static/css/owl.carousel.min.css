@@ -1,0 +1,117 @@
+/**
+ * Owl Carousel v2.2.1
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
+ */
+.owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
+.owl-carousel{display:none;width:100%;z-index:1}
+.owl-carousel .owl-stage{position:relative;-ms-touch-action:pan-Y;-moz-backface-visibility:hidden}
+.owl-carousel .owl-stage:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+.owl-carousel .owl-stage-outer{position:relative;overflow:hidden;-webkit-transform:translate3d(0,0,0); margin-left: -13px}
+.owl-carousel .owl-item,.owl-carousel .owl-wrapper{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0)}
+.owl-carousel .owl-item{min-height:1px;float:left;-webkit-backface-visibility:hidden;-webkit-touch-callout:none}
+.owl-carousel .owl-item img{display:block;width:100%;}
+.owl-carousel .owl-dots.disabled,.owl-carousel .owl-nav.disabled{display:none}.no-js .owl-carousel,.owl-carousel.owl-loaded{display:block}
+.owl-carousel .owl-dot,.owl-carousel .owl-nav .owl-next,.owl-carousel .owl-nav .owl-prev{cursor:pointer;cursor:hand;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.owl-carousel.owl-loading{opacity:0;display:block}.owl-carousel.owl-hidden{opacity:0}.owl-carousel.owl-refresh .owl-item{visibility:hidden}
+.owl-carousel.owl-drag .owl-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.owl-carousel.owl-grab{cursor:move;cursor:grab}.owl-carousel.owl-rtl{direction:rtl}.owl-carousel.owl-rtl .owl-item{float:right}
+.owl-carousel .animated{animation-duration:1s;animation-fill-mode:both}.owl-carousel .owl-animated-in{z-index:0}
+.owl-carousel .owl-animated-out{z-index:1}
+.owl-carousel .fadeOut{animation-name:fadeOut}
+@keyframes fadeOut{0%{opacity:1}100%{opacity:0}}
+.owl-height{transition:height .5s ease-in-out}
+.owl-carousel .owl-item .owl-lazy{opacity:0;transition:opacity .4s ease}
+.owl-carousel .owl-item img.owl-lazy{transform-style:preserve-3d}
+.owl-carousel .owl-video-wrapper{position:relative;height:100%;background:#000}
+.owl-carousel .owl-video-play-icon{position:absolute;height:80px;width:80px;left:50%;top:50%;margin-left:-40px;margin-top:-40px;background:url(owl.video.play.png) no-repeat;cursor:pointer;z-index:1;-webkit-backface-visibility:hidden;transition:transform .1s ease}
+.owl-carousel .owl-video-play-icon:hover{-ms-transform:scale(1.3,1.3);transform:scale(1.3,1.3)}
+.owl-carousel .owl-video-playing .owl-video-play-icon,.owl-carousel .owl-video-playing .owl-video-tn{display:none}
+.owl-carousel .owl-video-tn{opacity:0;height:100%;background-position:center center;background-repeat:no-repeat;background-size:contain;transition:opacity .4s ease}
+.owl-carousel .owl-video-frame{position:relative;z-index:1;height:100%;width:100%}
+
+/*20200303 add style*/
+body .sort2 .sortTxt,body  .sort1 .sortTxt{width:0;height:0;overflow:hidden;position:absolute;left:-9999px;font-size:0}
+body .sort2 .slideBox{background:#f2f2f2}
+body .sort1 .owl-carousel .owl-item img{display:none}
+body .sort1 .sortSlide div.owl-item.on+div.owl-item,body .sort1 .sortSlide div.owl-item.on{border-color:#000}
+body .sort1 .sortSlide div.owl-item:last-child,.sort1 .sortSlide div.owl-item{background:#000;border-color:#000}
+body .sort1 .sortSlide div.owl-item{height:50px}
+body .sort1 .sortList{display:none}
+body .sort1 #cate1_div{display:block;width:100%}
+body .sort1 {max-width:1000px;width:100%}
+.sort1{margin-bottom:0;vertical-align:top}
+.sort1 .sortSlide{background:#000;padding:0 30px}
+.sort1 .sortSlide div.owl-item p.txt{position:absolute;height:50px;border-radius:50%;color:#fff;margin:auto;left:0;right:0;top:0;bottom:0;line-height:50px}
+.sort1 .sortSlide div.owl-item a.pp p.txt{
+	line-height:initial;
+}
+.sort1 .sortSlide div.owl-item a.pp p.txt span{
+	display:inline-block;
+	padding:11px 0 10px;
+}
+.sortSlide div.owl-item .on2 p.txt{color:#999}
+.sort1 .sortSlide div.owl-item.on p.txt,.sort1, .sort1 .sortSlide div.owl-item a:hover p.txt{color:#ffe500}
+.sort1 .sortSlide div.owl-item .on p.txt{border-color:#ea1e52}
+.owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled{display:block}
+.sort1 .sortSlide .owl-nav .owl-next, .sort1 .sortSlide .owl-nav .owl-prev{width:30px}
+.sort1 .sortSlide .owl-nav .owl-next{background:url("/img/mt_iconNx01.png") no-repeat left center}
+.sort1 .sortSlide .owl-nav .owl-prev{background:url("/img/mt_iconPv01.png") no-repeat right center}
+.sort2{max-width:1000px;width:100%}
+.sort2 .sortSlide {padding: 0 50px}
+.sort2 .sortSlide .owl-nav{display:block}
+body .sort2 .sortList{display:none}
+body .sort2 #cate2_div{display:block;width:100%}
+body .sort2 .sortSlide{border-top:1px solid #d9d9d9;border-bottom:1px solid #d9d9d9}
+.sort2 .sortSlide .owl-nav .owl-next, .sort2 .sortSlide .owl-nav .owl-prev{width:55px;z-index:70;}
+.sort2 .sortSlide .owl-nav .owl-next{background:#fff url("/img/mt_iconPv02.png") no-repeat  center;border:1px solid #d9d9d9;border-bottom:0;border-top:0}
+.sort2 .sortSlide .owl-nav .owl-prev{background:#fff url("/img/mt_iconNx02.png") no-repeat  center;border:1px solid #d9d9d9;border-bottom:0;border-top:0}
+.sort2 .sortSlide div.owl-item{border-top:0;border-bottom:0}
+.sort2 .sortSlide div.owl-item p.txt{position:absolute;bottom:0;width:100%;padding:10px 0;bottom:0;height:auto;line-height:1;font-size:14px}
+.sort2 .sortSlide div.owl-item.on p.txt{background:#ea1e52;color:#fff}
+.sort2 .sortSlide div.owl-item.on{border-color:#d9d9d9}
+.sort2 .sortSlide div.owl-item.on+div.owl-item{border-color:#d9d9d9}
+.boardBox{width:100%;max-width:1000px;position:relative;}
+.boardBox:after{content:"";clear:both;display:block}
+.boardBox .board{float:left;width:720px;height:720px}
+.boardBox .btn{position:absolute;bottom:0;width:250px;right:0;height:100%;margin:0}
+.boardBox .btn .delBtn,.boardBox .btn .compleBtn{
+	border: 1px solid #ea1e52;
+	font-size:15px;padding:20px 0 ;line-height:1;height:auto;width:100%;
+}
+.boardBox .btn .delBtn{margin-top:10px;border:1px solid #d9d9d9;color:#777;background:#fff}
+.boardBox .select_items{height:calc(100% - 124px);text-align:left}
+.boardBox .select_items button{
+	position:relative;
+	line-height:36px;
+	white-space:nowrap;
+	margin-bottom:10px; padding:2px 13px 0 30px; color:#fff;background:#ea1e52;margin-right:5px;border:0;border-radius:50px;font-size:13px;font-weight:700;clear:both
+}
+.boardBox .select_items button img{
+	position:absolute; top:0; bottom:0; left:15px;
+	margin:auto;
+}
+.sort2  .owl-carousel .owl-item img {width:80%;margin:0 auto;padding-top:20px;max-width:100px}
+
+@media only screen and (max-width: 999px){
+	.boardBox .board{width:100%;height:auto;float:none}
+	.boardBox .btn{position:static;width:100%}
+	.sub_con{padding-left:4.68%;padding-right:4.68%}
+	.boardBox .select_items{height:auto;padding:20px 0;clear:both}
+	.boardBox .select_items button{float:left;clear:none;font-size:0.9rem}
+	.boardBox .select_items:after{content:"";clear:both;display:block}
+	.boardBox .btn .delBtn, .boardBox .btn .compleBtn{width:47%}
+	.boardBox .btn .compleBtn{margin-left:6%}
+	.boardBox .btn .delBtn{margin-top:0;}
+}
+
+@media only screen and (max-width: 999px) and (min-width: 640px){
+}
+
+@media only screen and (max-width: 640px){
+.sort2 .sortSlide div.owl-item p.txt{font-size:12px}
+.boardBox .btn .delBtn{margin-top:0}
+}
+/*선택되어있는건 그레이고 마우스를 올렸을땐 */
+
+

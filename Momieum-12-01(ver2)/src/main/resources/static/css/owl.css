@@ -1,0 +1,47 @@
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ *  Owl Carousel - Core
+ */
+
+  /* 화살표 스타일링 */
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+    font-size: 43px; /* 화살표 크기 조정 */
+    color: #fff; /* 화살표 색상 */
+    background-color: #cbd1da; /* 화살표 배경 색상 */
+    border: 2px solid #ffffff; /* 화살표 테두리 */
+    border-radius: 10%; /* 원형 화살표 */
+    width: 35px; /* 화살표 너비 */
+    height: 35px; /* 화살표 높이 */
+    line-height: 13px; /* 화살표 내부 정렬 */
+    margin-bottom : 40px;
+    /* 기타 위치 조정 및 스타일링 */
+}
+
+/* 화살표 위치 조정 */
+.owl-carousel .owl-nav .owl-prev {
+    left: -60px; /* 왼쪽 화살표 위치 조정 */
+   
+}
+
+.owl-carousel .owl-nav .owl-next {
+    right: -30px; /* 오른쪽 화살표 위치 조정 */
+}
+
+.owl-nav {
+	margin-bottom : -25px;
+	
+}
+
+.owl-carousel .owl-dots {
+    display: none;
+}
+
+.owl-carousel .owl-stage-outer{
+	margin-left : -13px;
+	
+}
